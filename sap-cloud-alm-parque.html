@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Parque do SAP Cloud ALM</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;600&display=swap">
+<style>
+:root{--bg:#F3F8F8;--card:#fff;--ink:#12343B;--mute:#4F6A70;--line:#CFE0E2;--acc:#1B7F79;--sun:#F2B84B;--ok:#1E7A46;--okbg:#E3F4EA;--bad:#A8352B;--badbg:#FBE9E6;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1E22;--card:#152A2F;--ink:#E6F2F2;--mute:#9DB7BB;--line:#2A4449;--acc:#4FC3BA;--sun:#F2B84B;--ok:#7BD39B;--okbg:#17352440;--bad:#F29A90;--badbg:#3A1B18}}
+:root[data-theme="dark"]{--bg:#0E1E22;--card:#152A2F;--ink:#E6F2F2;--mute:#9DB7BB;--line:#2A4449;--acc:#4FC3BA;--sun:#F2B84B;--ok:#7BD39B;--okbg:#17352440;--bad:#F29A90;--badbg:#3A1B18}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.65 Nunito,system-ui,sans-serif}
+main{max-width:860px;margin:0 auto;padding:20px 16px 56px}
+h1,h2,h3{font-family:Fredoka,Nunito,sans-serif;font-weight:600;line-height:1.25;margin:0}
+h1{font-size:28px}h2{font-size:22px;margin:36px 0 12px}h3{font-size:17px}
+p{margin:6px 0}.mute{color:var(--mute);font-size:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:12px 0}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+nav a,.chip,button{font:600 14px Nunito,sans-serif;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:7px 14px;cursor:pointer;text-decoration:none}
+button.pri{background:var(--acc);border-color:var(--acc);color:#fff}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.hero{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:720px){.hero{grid-template-columns:1.3fr 1fr}}
+.bar{height:10px;background:var(--line);border-radius:6px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--acc);width:0;transition:width .4s}
+.row{display:flex;justify-content:space-between;gap:10px;font-size:14px;margin:8px 0 4px}
+details{border:1px solid var(--line);border-radius:14px;background:var(--card);margin:10px 0}
+summary{cursor:pointer;padding:14px 16px;display:flex;gap:10px;align-items:center;justify-content:space-between;font-family:Fredoka,Nunito,sans-serif;font-weight:500;font-size:17px}
+.body{padding:0 16px 16px}
+.kid{border-left:4px solid var(--sun);padding:6px 12px;margin:8px 0 12px;font-size:17px}
+ul{padding-left:20px;margin:8px 0}li{margin:3px 0}
+textarea{width:100%;min-height:76px;font:400 15px/1.5 Nunito,sans-serif;border:1px solid var(--line);border-radius:10px;padding:10px;background:var(--bg);color:var(--ink)}
+.stars button{padding:5px 11px}.stars button[aria-pressed="true"]{background:var(--sun);border-color:var(--sun);color:#12343B}
+.q{margin:14px 0;padding:12px;border:1px solid var(--line);border-radius:12px}
+.q label{display:block;padding:6px 8px;border-radius:8px;cursor:pointer}
+.q.ok{background:var(--okbg);border-color:var(--ok)}.q.bad{background:var(--badbg);border-color:var(--bad)}
+.fb{font-size:14px;margin-top:6px}.err{color:var(--bad);font-size:14px}
+.log li{list-style:none;border-bottom:1px solid var(--line);padding:8px 0;margin:0}
+.log{padding:0}
+.tag{font-size:13px;color:var(--mute);font-family:Nunito,sans-serif;font-weight:400}
+</style>
+</head>
+<body>
+<main>
+<header>
+<h1>Parque do SAP Cloud ALM</h1>
+<p class="mute">Estudo guiado a partir dos três guias da SAP Help (Implementação, Operações e Monitoramento, Services). Seu progresso fica salvo neste navegador.</p>
+<nav aria-label="Seções"><a href="#aulas">Aulas</a><a href="#atividades">Atividades</a><a href="#diario">Diário de evolução</a></nav>
+</header>
+
+<section class="card hero" aria-label="Resumo do progresso">
+<svg viewBox="0 0 400 200" width="100%" role="img" aria-label="Mapa do parque com três áreas que ficam mais coloridas conforme você avança">
+<title>Mapa do parque</title>
+<rect x="150" y="12" width="100" height="40" rx="10" fill="none" stroke="currentColor" stroke-opacity=".5"/>
+<text x="200" y="37" text-anchor="middle" font-size="14" font-family="Fredoka,sans-serif" fill="currentColor">Gerente ALM</text>
+<g stroke="currentColor" stroke-opacity=".4" fill="none"><path d="M175 52L72 110"/><path d="M200 52V110"/><path d="M225 52L328 110"/></g>
+<rect id="z1" x="12" y="110" width="120" height="70" rx="12" fill="#1B7F79" fill-opacity=".12" stroke="#1B7F79"/>
+<rect id="z2" x="140" y="110" width="120" height="70" rx="12" fill="#1B7F79" fill-opacity=".12" stroke="#1B7F79"/>
+<rect id="z3" x="268" y="110" width="120" height="70" rx="12" fill="#1B7F79" fill-opacity=".12" stroke="#1B7F79"/>
+<g font-size="13" font-family="Nunito,sans-serif" text-anchor="middle" fill="currentColor">
+<text x="72" y="140">Montar</text><text x="72" y="158" font-size="12" fill-opacity=".7">Implementação</text>
+<text x="200" y="140">Vigiar</text><text x="200" y="158" font-size="12" fill-opacity=".7">Operações</text>
+<text x="328" y="140">Atender</text><text x="328" y="158" font-size="12" fill-opacity=".7">Services</text></g>
+</svg>
+<div>
+<h3>Seu progresso</h3>
+<div class="row"><span>Geral</span><b id="pAll">0%</b></div><div class="bar"><i id="bAll"></i></div>
+<div class="row"><span>Aulas concluídas</span><b id="sL">0/6</b></div>
+<div class="row"><span>Melhor média nos quizzes</span><b id="sQ">—</b></div>
+<div class="row"><span>Atividades práticas</span><b id="sP">0/6</b></div>
+<p class="mute">Cada área ganha cor conforme aula, quiz e prática avançam.</p>
+</div>
+</section>
+
+<h2 id="aulas">Aulas</h2>
+<div id="lessons"></div>
+
+<h2 id="atividades">Atividades</h2>
+<div class="card">
+<p>Perguntas baseadas nos PDFs carregados. Escolha um tema e confira suas respostas.</p>
+<div id="chips" role="group" aria-label="Tema do quiz" style="display:flex;gap:8px;flex-wrap:wrap;margin:10px 0"></div>
+<div id="quiz"></div>
+</div>
+<h3 style="margin:18px 0 6px">Atividades práticas</h3>
+<p class="mute">Escreva com suas palavras, como se explicasse para uma criança de 5 anos. Suas respostas ficam salvas.</p>
+<div id="prac"></div>
+
+<h2 id="diario">Diário de evolução</h2>
+<div class="card">
+<label for="note" class="mute">Anote o que aprendeu, dúvidas ou o que quer rever</label>
+<textarea id="note"></textarea>
+<p><button class="pri" id="addNote">Salvar anotação</button> <span id="noteErr" class="err"></span></p>
+<h3 style="margin-top:16px">Quizzes por tema</h3>
+<div id="hist" class="mute"></div>
+<h3 style="margin-top:16px">Linha do tempo</h3>
+<ul class="log" id="log"></ul>
+<p><button id="reset">Apagar todo o progresso</button></p>
+</div>
+<p class="mute">Conteúdo baseado em traduções automáticas da SAP Help; confira termos importantes na versão em inglês.</p>
+</main>
+<script>
+var L=[
+{id:"l1",t:"Aula 1: o mapa do parque",kid:"O SAP Cloud ALM é o gerente de um parque: ele ajuda a montar, vigiar e atender.",pts:["Para implementação: abordagem harmonizada, guiada por conteúdo.","SAP Business Transformation Center: planejar projetos de transformação e transição de dados.","Para operações: operações tranquilas e mais qualidade e desempenho dos processos.","Para serviço: colaboração e transparência na entrega de serviços SAP.","SAP Cloud ALM e RISE with SAP Methodology: caminho para o clean core."],src:"Seção Síntese funcional, nos três guias"},
+{id:"l2",t:"Aula 2: as chaves do parque",kid:"Cada pessoa recebe chaves que abrem só as salas certas. As chaves são as funções.",pts:["Criar usuários e atribuir funções.","Ver todos os usuários e suas funções, filtrando por status, tipo ou função.","Mudar as funções de vários usuários de uma só vez.","Remover, desativar ou reativar usuários.","Processar solicitações de atribuição de funções.","Ver o histórico de ações de administração."],src:"Guia Implementação, Administração, Gerenciamento de usuários"},
+{id:"l3",t:"Aula 3: a lista de tarefas",kid:"Antes de abrir o parque, anote o que falta, quem faz e se já ficou pronto.",pts:["Gerenciamento de projetos.","Administração de processos.","Gerenciamento de modificações e implementação.","SAP Readiness Check.","Documentação da solução.","Transformação: orientação e gerenciamento de dados."],src:"Guia Implementação, grupos Implementação e Transformação"},
+{id:"l4",t:"Aula 4: os robozinhos e o painel",kid:"Robozinhos (agentes de IA) trabalham sozinhos. O painel mostra se acertam e por que erram.",pts:["Página inicial: porcentagem de êxito das tarefas, agentes mais usados e causas do erro.","Lista de agentes, com filtros, busca e exportação.","Detalhes do agente: insights gerais, pontuação de integridade e sessões.","Detalhes da sessão: fluxo de execução e visão da linha do tempo.","Também há a monitorização dos processos empresariais."],src:"Guia Operações e Monitoramento, Monitoramento de agente de IA"},
+{id:"l5",t:"Aula 5: o balcão de atendimento",kid:"Quando um visitante tem problema, anota-se no caderninho e alguém age.",pts:["Service Delivery Center: onde ver os serviços entregues.","Problemas e ações, com apoio do Joule.","Planos de sucesso.","Coleta de dados automática.","Potencial de adoção e assistência de IA para adoção de inovação."],src:"Guia Services"},
+{id:"l6",t:"Aula 6: revisão geral",kid:"Hora de provar que você conhece o parque inteiro.",pts:["Faça o quiz de revisão geral, com perguntas de todos os temas.","Monte seu mapa: qual área resolve qual dor?"],src:"Os três guias"}];
+var Q=[
+{m:"l1",q:"Qual área do SAP Cloud ALM busca garantir operações tranquilas e mais qualidade nos processos empresariais?",o:["Para implementação","Para operações","Para serviço","Business Transformation Center"],a:1,x:"É o SAP Cloud ALM para operações, descrito na Síntese funcional."},
+{m:"l1",q:"O SAP Business Transformation Center serve para:",o:["Monitorar agentes de IA","Cadastrar usuários","Planejar projetos de transformação e transição de dados","Registrar problemas de clientes"],a:2,x:"Segundo a Síntese funcional, ele planeja projetos de transformação de dados e transição de dados."},
+{m:"l2",q:"Qual item NÃO aparece entre as opções do app Administração de usuários?",o:["Alterar funções de vários usuários de uma vez","Ver o histórico de ações de administração","Criar usuários e atribuir funções","Instalar um novo sistema ERP"],a:3,x:"O app trata de usuários e funções, não de instalar sistemas."},
+{m:"l2",q:"Qual recurso do app cuida de pedidos para mudar a função de alguém?",o:["Processamento de solicitações de atribuição de funções","Pontuação de integridade","Planos de sucesso","Linha do tempo"],a:0,x:"Está no guia de Implementação, em Gerenciamento de usuários."},
+{m:"l3",q:"Qual destes é um tópico da área Implementação?",o:["Documentação da solução","Pontuação de integridade do agente","Service Delivery Center","Causas do erro"],a:0,x:"Documentação da solução faz parte do grupo Implementação."},
+{m:"l3",q:"Gerenciamento de modificações e implementação, no parque, é como:",o:["Vigiar os robozinhos","Controlar o que sai do canteiro de obras para o parque aberto","Abrir um chamado de cliente","Medir adoção"],a:1,x:"É o tópico que controla modificações e implantações dentro da área Implementação."},
+{m:"l4",q:"Qual indicador mostra quão saudável está cada agente de IA?",o:["Pontuação de integridade","Potencial de adoção","Plano de sucesso","Administração de tags"],a:0,x:"A pontuação de integridade está nos detalhes do agente."},
+{m:"l4",q:"Onde ver o passo a passo do que um agente fez numa execução?",o:["Lista de usuários","Detalhes da sessão: fluxo de execução e linha do tempo","Página de problemas e ações","Síntese funcional"],a:1,x:"Nos detalhes da sessão há fluxo de execução e visão da linha do tempo."},
+{m:"l5",q:"Qual tema pertence ao guia de Services?",o:["Planos de sucesso","Pontuação de integridade do agente","Administração de usuários","SAP Readiness Check"],a:0,x:"Planos de sucesso estão no guia de Services."},
+{m:"l5",q:"Onde ficam os serviços entregues ao cliente?",o:["Service Delivery Center","Detalhes da sessão","Administração de tags","Documentação da solução"],a:0,x:"O Service Delivery Center é o ponto de partida do guia de Services."}];
+var P={l1:"Explique em duas frases, para uma criança de 5 anos, a diferença entre implementar e operar.",l2:"A Ana entrou no time e precisa de acesso. Descreva o caminho: criar o usuário, dar a função e conferir o histórico.",l3:"Escolha dois tópicos da área Implementação e diga em que momento do projeto cada um ajuda.",l4:"Um agente está com muitos erros. Quais telas do monitoramento você abriria, e em que ordem?",l5:"Conte o caminho de um problema de cliente, do registro até a ação resolvida.",l6:"Monte seu mapa: qual área do Cloud ALM resolve qual dor do dia a dia?"};
+var S={lessons:{},quiz:{},prac:{},log:[]},KEY="alm-parque-v1",cur="l1";
+try{var raw=localStorage.getItem(KEY);if(raw){S=JSON.parse(raw)}}catch(e){}
+S.lessons=S.lessons||{};S.quiz=S.quiz||{};S.prac=S.prac||{};S.log=S.log||[];
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+function $(i){return document.getElementById(i)}
+function add(txt){S.log.unshift({t:new Date().toISOString(),x:txt});S.log=S.log.slice(0,200);save();renderLog()}
+function qs(m){return m==="l6"?Q:Q.filter(function(q){return q.m===m})}
+function name(id){return L.filter(function(l){return l.id===id})[0].t}
+function mod(id){var d=S.lessons[id]&&S.lessons[id].done?1:0,qq=S.quiz[id]?S.quiz[id].best/S.quiz[id].n:0,p=(S.prac[id]||"").trim().length>10?1:0;return d*.4+qq*.4+p*.2}
+function renderStats(){var t=0,dn=0,pr=0,qsum=0,qn=0;L.forEach(function(l,i){var v=mod(l.id);t+=v;if(S.lessons[l.id]&&S.lessons[l.id].done)dn++;if((S.prac[l.id]||"").trim().length>10)pr++;if(S.quiz[l.id]){qsum+=S.quiz[l.id].best/S.quiz[l.id].n;qn++}
+var z=$("z"+(i+1));if(z){}});
+var z=[["l1","l2","l3"],["l4"],["l5"]];z.forEach(function(g,i){var v=g.reduce(function(a,id){return a+mod(id)},0)/g.length;$("z"+(i+1)).setAttribute("fill-opacity",(.12+v*.75).toFixed(2))});
+var p=Math.round(t/L.length*100);$("pAll").textContent=p+"%";$("bAll").style.width=p+"%";$("sL").textContent=dn+"/6";$("sP").textContent=pr+"/6";$("sQ").textContent=qn?Math.round(qsum/qn*100)+"%":"—"}
+function renderLessons(){var h="";L.forEach(function(l){var s=S.lessons[l.id]||{};h+='<details id="d-'+l.id+'"'+(l.id==="l1"?" open":"")+'><summary><span>'+l.t+'</span><span class="tag" id="tg-'+l.id+'">'+(s.done?"concluída":"")+'</span></summary><div class="body"><p class="kid">'+l.kid+'</p><ul>'+l.pts.map(function(p){return"<li>"+p+"</li>"}).join("")+'</ul><p class="mute">Fonte: '+l.src+'</p><p><label><input type="checkbox" data-done="'+l.id+'"'+(s.done?" checked":"")+'> Já estudei esta aula</label></p><p class="mute">Quanto você confia que sabe explicar isto?</p><div class="stars" role="group" aria-label="Confiança">'+[1,2,3,4,5].map(function(n){return'<button data-c="'+l.id+':'+n+'" aria-pressed="'+(s.conf===n)+'">'+n+'</button> '}).join("")+'</div></div></details>'});
+$("lessons").innerHTML=h;
+document.querySelectorAll("[data-done]").forEach(function(c){c.onchange=function(){var id=c.dataset.done;S.lessons[id]=S.lessons[id]||{};S.lessons[id].done=c.checked;$("tg-"+id).textContent=c.checked?"concluída":"";save();add((c.checked?"Concluiu: ":"Desmarcou: ")+name(id));renderStats()}});
+document.querySelectorAll("[data-c]").forEach(function(b){b.onclick=function(){var a=b.dataset.c.split(":"),id=a[0],n=+a[1];S.lessons[id]=S.lessons[id]||{};S.lessons[id].conf=n;save();b.parentNode.querySelectorAll("button").forEach(function(x){x.setAttribute("aria-pressed",x===b)});add("Confiança "+n+"/5 em: "+name(id))}})}
+function renderChips(){$("chips").innerHTML=L.map(function(l){return'<button class="chip" data-m="'+l.id+'" aria-pressed="'+(l.id===cur)+'">'+l.t.split(":")[0]+(l.id==="l6"?" (geral)":"")+'</button>'}).join("");
+document.querySelectorAll("[data-m]").forEach(function(b){b.onclick=function(){cur=b.dataset.m;renderChips();renderQuiz()}})}
+function renderQuiz(){var list=qs(cur),h='<h3>'+name(cur)+'</h3>';list.forEach(function(q,i){h+='<div class="q" id="q'+i+'"><p><b>'+(i+1)+'. '+q.q+'</b></p>'+q.o.map(function(o,j){return'<label><input type="radio" name="r'+i+'" value="'+j+'"> '+o+'</label>'}).join("")+'<p class="fb" id="f'+i+'"></p></div>'});
+h+='<p><button class="pri" id="chk">Conferir respostas</button> <span class="err" id="qerr"></span></p><p id="qres"></p>';$("quiz").innerHTML=h;
+$("chk").onclick=function(){var ans=[];for(var i=0;i<list.length;i++){var c=document.querySelector('input[name="r'+i+'"]:checked');if(!c){$("qerr").textContent="Responda todas as perguntas antes de conferir.";return}ans.push(+c.value)}
+$("qerr").textContent="";var ok=0;list.forEach(function(q,i){var r=ans[i]===q.a;if(r)ok++;$("q"+i).className="q "+(r?"ok":"bad");$("f"+i).textContent=(r?"Certo. ":"Não foi dessa vez. ")+q.x});
+var prev=S.quiz[cur];S.quiz[cur]={last:ok,best:Math.max(ok,prev?prev.best:0),n:list.length,tries:(prev?prev.tries:0)+1};save();
+$("qres").textContent="Você acertou "+ok+" de "+list.length+".";add("Quiz "+name(cur).split(":")[0]+": "+ok+"/"+list.length);renderStats();renderHist()}}
+function renderPrac(){$("prac").innerHTML=L.map(function(l){return'<div class="card"><h3>'+l.t.split(":")[0]+'</h3><p>'+P[l.id]+'</p><textarea id="p-'+l.id+'" aria-label="Resposta da '+l.t.split(":")[0]+'"></textarea><p><button data-p="'+l.id+'">Salvar resposta</button> <span class="mute" id="ps-'+l.id+'"></span></p></div>'}).join("");
+L.forEach(function(l){$("p-"+l.id).value=S.prac[l.id]||""});
+document.querySelectorAll("[data-p]").forEach(function(b){b.onclick=function(){var id=b.dataset.p,v=$("p-"+id).value.trim();if(v.length<10){$("ps-"+id).textContent="Escreva pelo menos uma frase.";return}S.prac[id]=v;save();$("ps-"+id).textContent="Resposta salva.";add("Prática salva: "+name(id).split(":")[0]);renderStats()}})}
+function renderHist(){var k=Object.keys(S.quiz);$("hist").textContent=k.length?"":"Ainda sem quizzes. Faça o primeiro na área de atividades.";var d=$("hist");k.forEach(function(id){var q=S.quiz[id],p=document.createElement("p");p.textContent=name(id).split(":")[0]+": último "+q.last+"/"+q.n+", melhor "+q.best+"/"+q.n+", "+q.tries+" tentativa(s)";d.appendChild(p)})}
+function renderLog(){var u=$("log");u.innerHTML="";if(!S.log.length){var e=document.createElement("li");e.className="mute";e.textContent="Seu histórico aparece aqui conforme você estuda.";u.appendChild(e);return}
+S.log.forEach(function(r){var li=document.createElement("li"),d=new Date(r.t);li.textContent=d.toLocaleDateString("pt-BR")+" "+d.toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"})+" — "+r.x;u.appendChild(li)})}
+$("addNote").onclick=function(){var v=$("note").value.trim();if(!v){$("noteErr").textContent="Escreva algo antes de salvar.";return}$("noteErr").textContent="";add("Anotação: "+v);$("note").value=""};
+$("note").oninput=function(){$("noteErr").textContent=""};
+$("reset").onclick=function(){if(confirm("Apagar todo o progresso salvo?")){S={lessons:{},quiz:{},prac:{},log:[]};save();renderLessons();renderPrac();renderQuiz();renderHist();renderLog();renderStats()}};
+renderLessons();renderChips();renderQuiz();renderPrac();renderHist();renderLog();renderStats();
+</script>
+</body>
+</html>
